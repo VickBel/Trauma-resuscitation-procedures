@@ -1,2 +1,3 @@
-library(rofi)
-data <- import_data(test = TRUE)
+
+
+combined.dataset <- rofi::merge_data(data)
