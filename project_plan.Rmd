@@ -1,0 +1,86 @@
+---
+title: "Study plan"
+output:
+#  word_document: default
+ # pdf_document: default
+bibliography: # citations.bib
+csl: bmcemerg.csl
+link-citations: yes
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# List of Abbreviations
+
+SweTrau ----       Swedish National Trauma Registry
+
+M&M   ----        Mortality and Morbidity
+
+
+# Introduction
+
+Associations between trauma resuscitation procedures and opportunities for improvement in adult patients with severe trauma
+
+Traumatic injury is a major cause of mortality and morbidity worldwide and the primary cause of death in young people (1). Traumatic injuries can be complex and require multidisciplinary treatment and rehabilitation. They often require multiple procedures during resuscitation, such as intubation, tube thoracostomy, and blood transfusions. This often results in personal and societal costs and is a significant public health burden globally (2). A significant factor in determining the outcome is the trauma treatment quality. Studies have shown that by improving trauma care, a significant number of deaths may be preventable (3)(). 
+
+A major factor in trauma quality improvement programs are the multidisciplinary mortality and morbidity conferences (M&M). Patient cases that are suspected to have opportunities for improvement (OFI) are selected for the conference, to be reviewed. While M&M conferences have been proven to be successful, the implementation is not yet standardized globally (4). Additionally, they require significant resources therefore it is of great value that patient cases are carefully and strategically selected (5). 
+
+Utilizing audit filters is one attempt to improve and standardize case selection. Audit filters are tools used to collect and analyze data about specific aspects of a resuscitation procedure. They can also serve as descriptions of specific timeframes in which tests or treatments should be provided and also predict possible outcomes in injured patients. Even though audit filters are effective in conserving time and resources, the effectiveness of audit filters has not been systematically reviewed (2) (6). Examples of limitations could be excluding relevant cases and not being implementable in all settings (). 
+
+The associations between these invasive procedures and opportunities for improvement are not well understood. The purpose of this study is to identify opportunities for improvement in the care of adult trauma patients. 
+
+
+# Methods
+
+### Study design
+We conducted a registry-based cohort study using data from 
+a subset group extracted from the trauma registry database at the Karolinska University Hospital in Solna.
+
+To ensure objectivity all statistical analyses were first done on synthetic data. 
+The study used bivariable logistic regression to analyze the data and to determine the association with the presence of opportunity for improvement and will consider results to be statistically significant if the probability of getting such results by chance is less than 5%.
+
+
+
+### Setting
+Pre-hospital care is managed by paramedics and specially trained physicians, and patients are triaged at the scene based on their vital signs and the mechanism of injury. Patients with open head injuries are considered a priority and are transported to KUH, a level 1 trauma center in Solna, where they are treated by a dedicated team of medical specialists. KUH also keeps a record of all patients treated at the center, which is submitted to SweTrau, the national trauma registry in Sweden, and follows the SweTrau guidelines. The center also conducts internal reviews and audits of cases to identify and prevent errors in patient care and improve the quality of treatment.
+
+Karolinska university hospital is a medical facility located in Solna, Sweden that specializes in treating patients with severe injuries. It is considered to be a level 1 trauma center according to standards set by the American College of Surgeons. KUH is the main trauma center for the Stockholm region and also provides care for patients from other regions. This means that it is the main trauma center for a population of almost 3 million people. The center also keeps a record of all patients treated at the center, which is submitted to SweTrau, the national trauma registry in Sweden and follows the SweTrau guidelines. The data recorded includes information about the patient's injury, vital signs and treatment given before and after arriving at the hospital and follow-up data such as survival rate, days in ventilator, GCS at discharge and level of care. Additionally, the center also keeps an internal register of the outcome of M&M conferences, which records data from 2014 to 2021.
+
+
+
+### Participants
+The cohort contains information about 6000 patients who were selected for review between 2014 (17 -morbidity) and 2021. (Add information about the year they were treated. + reference?)
+
+### Variables
+
+**Study outcome**
+
+
+
+**Predictors**
+
+### Data sources and measurements
+
+
+
+### Bias
+
+
+
+### Study size
+
+
+
+### Quantitative variables
+
+
+### Statistical methods
+
+
+
+# Results
+
+# References
