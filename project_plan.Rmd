@@ -1,8 +1,9 @@
 ---
 title: "Study plan"
 output:
+  pdf_document
 #  word_document: default
- # pdf_document: default
+
 bibliography: # citations.bib
 csl: bmcemerg.csl
 link-citations: yes
