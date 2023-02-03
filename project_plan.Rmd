@@ -17,8 +17,12 @@ always_allow_html: true
 ```{r setup, include=FALSE}
 setwd("~/Trauma-resuscitation-procedures")
 
-source("main.R") ## This "imports" the main script file of your project and run any code in it
 source("clean_all_predictors.R") ## This cleans the data from inaccurate values
+source("clean_audit_filters.R") ## cleans the "VK" columns, aka our audit filters.
+source("format_table1.R") ## change "labels" for columns -> better outputs in tables
+source("create_flowchart.R") ## Function to create flowchart, check create_flowchart.R for details and customization.
+
+source("main.R") ## This "imports" the main script file of your project and run any code in it
 
 ```
 
@@ -34,22 +38,26 @@ source("clean_all_predictors.R") ## This cleans the data from inaccurate values
 # Introduction
 Traumatic injury <!-- Use just trauma, and consider defining it as "The clinical entity composed of physical injury and the body's associated response"-->is a major cause of mortality and morbidity worldwide and the primary cause of death in young people [@Candef]. Traumatic injuries can be complex and require multidisciplinary treatment and rehabilitation, resulting in personal and societal costs and a significant public health burden globally [@Evans]. 
 
-According to WHO traumatic injuries are responsible for approximately 9% of all deaths and 6% of all disability-adjusted life years globally [@who21]. In 2020, traumatic injuries was responsible for an estimated 5 million deaths <!-- I was under the impression that the latest figure was 4.5 millions, but maybe I'm wrong? Is this from the latest global burden of disease study?-->  and represented approximately 8% of the global burden of disease, which I most significant in low- and middle-income countries, where nearly 90% of injury deaths occur[@who14]. 
+According to WHO traumatic injuries are responsible for approximately 9% of all deaths and 6% of all disability-adjusted life years globally [@who21]. In 2020, traumatic injuries was responsible for an estimated 5 million deaths <!-- I was under the impression that the latest figure was 4.5 millions, but maybe I'm wrong? Is this from the latest global burden of disease study?-->  and represented approximately 8% of the global burden of disease, which is most significant in low- and middle-income countries, where nearly 90% of traumatic deaths occur[@who14]. 
 
 The specific causes of traumatic injury can vary over time and may be influenced by a variety of factors, including changes in the population's age structure, patterns of behavior, and the availability of resources for injury prevention and treatment [@who14]. Road traffic injuries, falls and violence-related injuries are common causes of traumatic injury. The world health organization (WHO) has estimated that the cost of road traffic injuries alone amounts to approximately $500 billion annually [@Bulto2018]. 
 
-During trauma emergencies, a multidisciplinary team works in tandem in order to optimize patient care and treatment efficiency. Those include emergency department physicians, trauma surgeons, nurses, and other specialists. They use various resuscitation procedures such as airway management, fluid resuscitation, and blood transfusion which are essential to maintaining vital organ function and preventing further injury. 
+During trauma emergencies, a multidisciplinary team works in tandem in order to optimize patient care and treatment efficiency. Those include emergency department physicians, trauma surgeons, nurses, and other specialists.<!--In an ideal case, this is true. But team structure and availability change drastically between settings. I would not be so specific about this. Instead expand on the next section: Trauma require a broad array of interventions. Gooed examples of resuscitations proceedures but also mention operative and interventional pathways --> They use various resuscitation procedures such as airway management, fluid resuscitation, and blood transfusion which are essential to maintaining vital organ function and preventing further injury. 
 
 <!-- I understand that this is a draft, but I don't think that this is the right place to talk about injury severity scores or models. If you need to have more text then sure, but otherwise I would move on to care quality -->
 Trauma severity models  have been developed in order to quickly assess a patient's condition and determine the most appropriate course of action. 
 The injury severity score (ISS) describes the severity of multiple injuries in a single person and ranges from 1 to 75, with higher scores indicating a greater degree of injury severity. The revised trauma score (RTS) and trauma and injury severity score (TRISS) are other examples of prediction models that have improved efficiency and efficacy in prognosis prediction. These models use patient-specific data such as demographics, injury patterns, and vital signs to predict the likelihood of a patient's survival or the need for specific interventions. They allow healthcare providers to quickly identify and prioritize high-risk patients and determine line of priority.
 
-Another significant factor in determining the outcome is the trauma treatment quality. Studies have shown a correlation between quality of trauma care and patient fatality, which have an inversely proportional relationship, showing the importance of optimizing treatment quality ().
+Another significant factor in determining the outcome is the trauma treatment quality. Studies have shown a correlation between quality of trauma care and patient fatality, which have an inversely proportional relationship, showing the importance of optimizing treatment quality (). <!--True! Expand on this: trauma systems? -->
 
-Mortality and morbidity (M&M) conferences are a major factor in improving the quality of care for trauma patients. These conferences are held on a regular basis and involve a comprehensive review of patient cases by a board consisting of a multidisciplinary trauma team. The purpose of this is to identify opportunities for improvement (OFI) in the care given. 
+Mortality and morbidity (M&M) conferences are a major factor in improving the quality of care for trauma patients. These conferences are held on a regular basis and involve a comprehensive review of patient cases by a board consisting of a multidisciplinary trauma team. The purpose of this is to identify opportunities for improvement (OFI) in the care given.
 
 The WHO guidelines for the M&M conferences recommend a specific structure and format for how they are carried out, including recommendations for case selection, team composition, and reporting of results [@who09].
-Cases with potential OFIs are typically selected by designated healthcare personnel, for the board to review. When an OFI is identified, new routine recommendations are set to improve general quality of care and prevent similar future outcomes. Common findings that may be identified are medication errors, failure to follow established protocols and shortage of healthcare personnel ().
+Cases with potential OFIs are typically selected by designated healthcare personnel, for the board to review. When an OFI is identified, new routine recommendations are set to improve general quality of care and prevent similar future outcomes. Common findings that may be identified are medication errors, failure to follow established protocols and shortage of healthcare personnel ().<!--True, but alos inital care and interventions: "Typically, OFIs identified often relate to initial care [@Vioque2014], specifically airway management, fluid resuscitation, hemorrhage control, and chest injury management [@Sanddal2011; @Roy2017; @OReilly2013]." 
+ doi          = {10.1186/s12913-017-2085-7}
+ doi          = {10.1097/TA.0b013e3181fec9ba}
+ doi          = {10.1016/j.amjsurg.2014.02.006}
+-->
 
 While M&M conferences have been proven to be successful, they require significant resources and the implementation is not yet standardized globally. Selecting the patient cases carefully and strategically is of uttermost importance in order to best utilize the resource, due to the large amount of data that has to be reviewed [@Bulto2018; @who09]. Some clinics use quality indicators or audit filters, such as time to first medical contact or adverse event rate, to automatically flag cases for inclusion in M&M conferences. 
 
@@ -72,25 +80,30 @@ The associations between different types of resuscitation procedures and opportu
 
 # Methods
 ### Study design
-<!-- I suggest that you use first person direct voice: "We conducted a ..."-->This is a registry-based study using trauma patients included in both the Karolinska University Hospital (KUH) trauma registry and Karolinska University Hospital trauma care quality database between 2017 and 2021. <!-- You can write that the trauma registry is part of SweTrau-->
+<!-- I suggest that you use first person direct voice: "We conducted a ..."-->This is a registry-based study using trauma patients included in both the Karolinska University Hospital (KUH) trauma registry and Karolinska University Hospital trauma care quality database between 2017 and 2021. <!-- You can write that the trauma registry is part of SweTrau. JA: I would suggest reports to the Swedish trauma registry-->
 The KUH trauma care quality database is a subset of the trauma registry and includes about 5200 patients selected for review between 2017 and 2021 and contains data on cases selected for the M&M conference review, noting the presence of opportunity for improvement. 
-SweTrau includes information on all patients who were admitted with trauma team activation, regardless of the severity of their injuries, as well as patients who were admitted without trauma team activation but were later found to have a high level of injury (ISS greater than 9). 
+KUH trauma registry includes information on all patients who were admitted with trauma team activation, regardless of the severity of their injuries, as well as patients who were admitted without trauma team activation but were later found to have a high level of injury (ISS greater than 9). 
 The two databases will be linked and analyzed to estimate the association between the resuscitation procedures and opportunities for improvement using multivariable logistic regression. To ensure objectivity all statistical analyses were first done on synthetic data and when using real data, names and ID numbers are anonymized. A 5% significance level and 95% confidence level will be used.
 
 ### Setting
 The Karolinska University Hospital is situated in Solna, Sweden and is the primary trauma center for the Stockholm region as well as several other regions. This means that KUH is the main center for treating traumatic injuries for an approximate population of 3 million people. The trauma center at KUH meets the standards of a level 1 trauma center as set by the American College of Surgeons.
 Trauma patients are triaged at the trauma scene based on their vital signs and the mechanism of injury. All patients in Stockholm with priority are transported to KUH, where they are treated by a trauma team. Patients with trauma team activation, regardless of injury severity score (ISS), as well as patients admitted without trauma team activation but found to have an ISS of more than 9 are registered in SweTrau. 
 
-SweTrau includes about 12000 patients treated between 2012 and 2021 and contains information about pre-hospital, hospital, and post-hospital care in accordance with the Utstein template, including factors such as demographics, vital signs, time to procedure, and time to intervention. The follow-up data includes, but is not limited to, survival at 30 days, days on a ventilator, GCS at discharge, the highest level of care received, and transfers to other units.<!-- So the trauma registry at KUH and SweTrau are not the same thing. The local trauma registry is part of SweTrau and uses the same eligibility criteria. I suspect that you're talking about the local trauma registry in this paragraph, at least in the fist sentence-->
+SweTrau<!--Note the difference between KUH trauma registry and swetrau. You work with KUHTR, which repports to SWETRAU but is not the same. In Setting, you should be explaining KUHTR primerely  --> includes about 12000 patients treated between 2012 and 2021 and contains information about pre-hospital, hospital, and post-hospital care in accordance with the Utstein template, including factors such as demographics, vital signs, time to procedure, and time to intervention. The follow-up data includes, but is not limited to, survival at 30 days, days on a ventilator, GCS at discharge, the highest level of care received, and transfers to other units.<!-- So the trauma registry at KUH and SweTrau are not the same thing. The local trauma registry is part of SweTrau and uses the same eligibility criteria. I suspect that you're talking about the local trauma registry in this paragraph, at least in the fist sentence-->
 
-Most of the patient cases went through an audit filter. Flagged cases from the filter were reviewed by a specialized nurse, who also evaluated cases on the spot without the filter. Cases with suspicion of mismanagement were included in the M&M conference, where specialists from all relevant trauma team fields were included. If an opportunity for improvement was found a resolution plan was presented and the details of the case, such as used audit filters, OFIs, and corrective actions, were registered in the KUH trauma care quality database.<!-- The exact procedure is not really relevant to your study. You need to explain how OFI were decided on, but it's enough to state that these were assigned by the M&M-->
+Most of the patient cases went through an audit filter. Flagged cases from the filter were reviewed by a specialized nurse, who also evaluated cases on the spot without the filter. Cases with suspicion of mismanagement were included in the M&M conference, where specialists from all relevant trauma team fields were included. If an opportunity for improvement was found a resolution plan was presented and the details of the case, such as used audit filters, OFIs, and corrective actions, were registered in the KUH trauma care quality database.<!-- The exact procedure is not really relevant to your study. You need to explain how OFI were decided on, but it's enough to state that these were assigned by the M&M--> <!--Exactely, "The presence of OFIs is a consensus decision from the conference". -->
 
 ### Participants
 The cohort contains information about 6000 patients who were selected for review between 2017 and 2021. The previously mentioned audit filters are used to select patients for inclusion in the trauma care quality database and M&M review. The inclusion criteria for this study are patients included in both the database and the registry, older than 15 years, and had an ISS score greater than 9. 
-Patients with missing data in any of the resuscitation procedures, such as intubation or blood transfusion will be excluded…
+Patients with missing data in any of the resuscitation procedures, such as intubation or blood transfusion will be excluded… <!-- You dont need to specify number of patients included at this stage, that is the first part of the results.  -->
 
 ### Variables
 Opportunities for improvement is the outcome variable and is defined as a binary variable with the levels "Yes - At least one opportunity for improvement identified" and "No - No opportunities for improvement identified". Data will be extracted from the trauma care quality database, on this outcome.
 
-
+# Results
+<!--I just wanted to show how to get the flowchart, see the create_flowchart.R file for details and if you might want to change anything. Note that the numbers are off because of scrambled data -->
+```{r ofi-flowchart, out.width="100%",fig.cap=" Flowchart describing the exclusions made and the process of trauma cases from arrival until OFI decision.", echo=FALSE, fig.align='center'}
+# Flowchart figure
+ knitr::include_graphics("ofi-flowchart.pdf")
+```
 # References
