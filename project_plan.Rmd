@@ -36,7 +36,11 @@ source("main.R") ## This "imports" the main script file of your project and run 
 # Introduction
 
 # Introduction
+<<<<<<< HEAD
 Traumatic injury, the clinical entity composed of physical injury and the body's associated response <!-- Cite Martin? -->is a major cause of mortality and morbidity worldwide and the primary cause of death in young people [@Candef]. Traumatic injuries can be complex and require multidisciplinary treatment and rehabilitation, resulting in personal and societal costs and a significant public health burden globally [@Evans]. 
+=======
+Traumatic injury <!-- Use just trauma, and consider defining it as "The clinical entity composed of physical injury and the body's associated response"-->is a major cause of mortality and morbidity worldwide and the primary cause of death in young people [@Candef]. Traumatic injuries can be complex and require multidisciplinary treatment and rehabilitation, resulting in personal and societal costs and a significant public health burden globally [@Evans]. 
+>>>>>>> f9aeffcca3686f0f964ca2c3d343ed67f6e8e62c
 
 According to WHO traumatic injuries are responsible for approximately 9% of all deaths and 6% of all disability-adjusted life years globally [@who21]. In 2020, traumatic injuries was responsible for an estimated 5 million deaths <!-- I was under the impression that the latest figure was 4.5 millions, but maybe I'm wrong? Is this from the latest global burden of disease study?-->  and represented approximately 8% of the global burden of disease, which is most significant in low- and middle-income countries, where nearly 90% of traumatic deaths occur[@who14]. 
 
@@ -106,4 +110,8 @@ Opportunities for improvement is the outcome variable and is defined as a binary
 # Flowchart figure
  knitr::include_graphics("ofi-flowchart.pdf")
 ```
+<<<<<<< HEAD
 # References
+=======
+# References
+>>>>>>> f9aeffcca3686f0f964ca2c3d343ed67f6e8e62c
