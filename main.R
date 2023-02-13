@@ -33,5 +33,4 @@ combined.dataset <- clean_all_predictors(combined.dataset)
 combined.dataset <- clean_audit_filters(combined.dataset)
 
 
-## Create a flow chart (Saves it as a pdf)
-#create_flowchart(combined.dataset)
+## Create a flow chart 
