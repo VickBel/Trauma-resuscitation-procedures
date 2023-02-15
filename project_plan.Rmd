@@ -54,6 +54,7 @@ One common area where OFIs are found is during the initial resuscitation phase, 
 Preventable deaths continue to occur in even the most well-equipped and staffed trauma centers. The complex variables involved in trauma resuscitation make it challenging to pinpoint the exact cause of an adverse event [@Teixeira2007] and research on the effectiveness of various interventions is limited [@Santana2012]. Despite progress in this field more research is needed to understand the impact of specific resuscitation procedures and OFIs [@Ghorbani2018; @Santana2012; @Berbiglia2013].
 
 
+
 # Aim
 
 The aim of this study is to determine the relationship between resuscitation procedures and opportunities for improvement in adult patients with severe trauma.
