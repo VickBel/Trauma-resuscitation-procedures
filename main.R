@@ -41,8 +41,9 @@ combined.dataset <- clean_audit_filters(combined.dataset)
 ## Create a flow chart (Saves it as a pdf)
 create_flowchart(combined.dataset)
 
-##Hämar alla columner
-#colnames(combined.dataset)
+##Hämar alla columner 251st
+colnames(combined.dataset)
 #Hamtar det kolumner hag ber om
-##bantad.dataset <- combined.dataset[,c("ed_emerg_proc", "pt_age")]
+tabel.dataset <- combined.dataset[,c("ed_emerg_proc", "pt_age")]
 
+ncol(combined.dataset)
