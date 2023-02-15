@@ -15,7 +15,7 @@ always_allow_html: yes
 
 
 ```{r setup, include=FALSE}
-setwd("~/Trauma-resuscitation-procedures")
+setwd("~victoriab/Trauma-resuscitation-procedures")
 
 source("clean_all_predictors.R") ## This cleans the data from inaccurate values
 source("clean_audit_filters.R") ## cleans the "VK" columns, aka our audit filters.
@@ -30,8 +30,6 @@ source("main.R") ## This "imports" the main script file of your project and run 
 * KUH - Karolinska University Hospital
 * M&M - Morbidity and mortality
 * OFI - Opportunities for improvement
-* RTS - Revised Trauma Score
-* TRISS - Trauma and Injury Severity Score 
 
 
 # Introduction
@@ -43,7 +41,7 @@ Common causes include road traffic accidents, falls, and violence-related injuri
 
 Studies have shown that the quality of trauma care plays a significant role in patient outcomes, with higher-quality care leading to better outcomes, showing the importance of optimizing treatment quality [@Demetriades2005; @Teixeira2007]. During trauma emergencies, a broad array of interventions are required depending on the type and severity of the trauma and the patient’s specific needs [@Martin2021]. Resuscitation procedures, such as airway management, fluid resuscitation, and blood transfusion, play a crucial role in stabilizing the patient and preserving vital organ function. The quick and effective implementation of these procedures can greatly improve the patient’s chances of survival and recovery [@Martin2021], showing the importance to have a well-functioning trauma system in place [@Cole2019; @Moran2018]. 
 
-A trauma system is a coordinated network of healthcare facilities and services designed to provide efficient and effective care to trauma patients. The key components of this system include specialized trauma centers, prehospital care, quality improvement programs, inter-facility transfer, education and training, and adequate resources [@Martin2021, @Moran2018]. 
+A trauma system is a coordinated network of healthcare facilities and services designed to provide effective care to trauma patients. The key components of this system include specialized trauma centers, prehospital care, quality improvement programs, inter-facility transfer, education and training, and adequate resources [@Martin2021, @Moran2018]. 
 
 Trauma centers are specialized hospitals that are equipped and staffed with experienced medical professionals to provide advanced care [@Candef]. The level of care provided by a trauma center varies, ranging from Level I, which is the highest level of care, to Level IV, which is the lowest level of care. This allows patients to receive the most appropriate level of care based on the severity of their injury [@Demetriades2005]. 
 
@@ -55,7 +53,9 @@ One common area where OFIs are found is during the initial resuscitation phase, 
 
 Preventable deaths continue to occur in even the most well-equipped and staffed trauma centers. The complex variables involved in trauma resuscitation make it challenging to pinpoint the exact cause of an adverse event [@Teixeira2007] and research on the effectiveness of various interventions is limited [@Santana2012]. Despite progress in this field more research is needed to understand the impact of specific resuscitation procedures and OFIs [@Ghorbani2018; @Santana2012; @Berbiglia2013].
 
+
 # Aim
+
 The aim of this study is to determine the relationship between resuscitation procedures and opportunities for improvement in adult patients with severe trauma.
 <!-- The results could help improve the quality of care in the trauma system, through changes to resuscitation procedures, better training and education for healthcare providers, or the adoption of new technologies. Ultimately, this research may lead to a reduction in the impact of traumatic injuries on public health.-->
 
@@ -67,8 +67,7 @@ We conducted a registry-based study using data on trauma patients included in tw
 The trauma care quality database consists of cases selected for the M&M conference with info on OFI.
 
 The two databases were linked and analyzed to estimate the association between the resuscitation procedures and opportunities for improvement using multivariable logistic regression. To ensure objectivity all statistical analyses were first done on synthetic data and when using real data, names and ID numbers are anonymized. 
-<!--To ensure objectivity all statistical analyses were first done on synthetic data and when using real data, names and ID numbers are anonymized. A 5% significance level and 95% confidence level will be used.
--->
+
 
 ### Setting
 
@@ -78,14 +77,16 @@ The Karolinska University Hospital is situated in Solna, Sweden, and is the prim
 
 The inclusion criteria for this study are patients included in both databases and are at least 15 years. Patients with incomplete data for all relevant variables were excluded from the analysis. Data was collected for patients registered between 2017 and 2021.
 
-The trauma registry includes all patients admitted to the hospital with trauma team activation, regardless of the severity of their injury, as well as patients who were not initially admitted with trauma team activation but later found to have a severe injury (ISS greater than 9).
-
+The trauma registry includes patients who triggered a trauma alert at the hospital, admitted patients with NISS>15, and transferred patients within 7 days of the event with NISS>15. It excludes patients with only a chronic subdural hematoma injury and those where the trauma alert was false.
+ 
 The trauma care quality database includes all patients reviewed by the Morbidity and Mortality board, which are selected by a specialized nurse.
 
 ### Variables
-The outcome will be opportunities for improvement, coded as either Yes - at least one opportunity for improvement, or No - no opportunity for improvement. Data will be extracted from the trauma care quality database, on this outcome.
+**Study outcome**
+The primary outcome of the study will be the binary variable "opportunities for improvement". The outcome will be coded as either "Yes" if there is at least one opportunity for improvement identified, or "No" if there are no opportunities for improvement identified. The data for this outcome will be extracted from the trauma care quality database. 
 
-The primary outcome of the study will be opportunities for improvement. The outcome will be coded as either "Yes" if there is at least one opportunity for improvement identified, or "No" if there are no opportunities for improvement identified. The data for this outcome will be extracted from the trauma care quality database. 
+**Predictors**
+The study aims to examine the association between recusation procedures and opportunities for improvement, using a database with select variables chosen through discussion among the research team.
 
 ### Data sources and measurements
 
@@ -99,7 +100,6 @@ To minimize this risk of bias we used synthetic data to develop the analysis mod
 
 We will include all patients in both the KUH trauma care quality registry and the corresponding information from the KUH trauma registry. The registration period for these patients was between 2014 and 2021, with a total of approximately 22,000 patients.
 
-
 ### Quantitative variables
 
 These variables include thoracotomy, laparotomy, pelvic packing, revascularization, radiological intervention, craniotomy, intracranial pressure measurement, thoracic drain, external fracture fixation, major fracture surgery and operating room wound revision
@@ -109,13 +109,23 @@ These variables include thoracotomy, laparotomy, pelvic packing, revascularizati
 
 The data was compiled and analyzed using R, a statistical computing language. The conversion and handling of variables were done according to the SweTrau manual [@Manual2021]. A multivariable logistic regression was conducted to find the significant association between resuscitation procedures and opportunities for improvement. The results were presented with a 95% confidence level and a p-value less than 0.05 was considered significant.
 
+### Ethical considerations
+
+The study uses anonymized patient information stored in a secure database. No patient consent was required due to public interest in improving trauma care.
+Stockholm Research Ethics Review Board approval number 2021-02541 and 2021-03531 
+ 
+
 # Results
 <!--I just wanted to show how to get the flowchart, see the create_flowchart.R file for details and if you might want to change anything. Note that the numbers are off because of scrambled data -->
-<!-- ```{r ofi-flowchart, out.width="100%",fig.cap=" Flowchart describing the exclusions made and the process of trauma cases from arrival until OFI decision.", echo=FALSE, fig.align='center'}
+<!--
+```{r ofi-flowchart, out.width="100%",fig.cap=" Flowchart describing the exclusions made and the process of trauma cases from arrival until OFI decision.", echo=FALSE, fig.align='center'}
 # Flowchart figure
- knitr::include_graphics("ofi-flowchart.pdf") 
+ #knitr::include_graphics("ofi-flowchart.pdf") 
 ```
 -->
+
+
+
 
 ```{r, echo=FALSE, out.width = "400px"}
 knitr::include_graphics("project-timeline.png")
