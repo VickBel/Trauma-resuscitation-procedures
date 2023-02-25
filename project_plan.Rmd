@@ -9,7 +9,7 @@ output:
 bibliography: bibliography.bib
 csl: vancouver.csl
 fontsize: 11pt
-linestretch: 1
+linestretch: 1,5
 always_allow_html: yes
 ---
 
@@ -89,13 +89,16 @@ We performed a complete case analysis, meaning that patients with incomplete dat
 
 ### Variables
 
-**Study outcome**
+***Study outcome***
+
 The primary outcome of the study will be the binary variable "opportunities for improvement". The outcome will be coded as either "Yes" if there is at least one opportunity for improvement identified, or "No" if there are no opportunities for improvement identified. The data for this outcome will be extracted from the trauma care quality database. 
 
-**exposures**
+***Exposures***
+
 These variables include thoracotomy, laparotomy, pelvic packing, revascularization, radiological intervention, craniotomy, intracranial pressure measurement, thoracic drain, external fracture fixation, major fracture surgery and operating room wound revision.
 
-***potential confounders***
+***Potential confounders***
+
 Gender, age, blood pressure, respiratory rate, Glasgow Coma Scale (GCS) and Injury Severity Score (ISS)  
 
 ### Bias
@@ -113,20 +116,24 @@ We will include all patients in both the KUH trauma care quality registry and th
 The data was compiled and analyzed using R, a statistical computing language. The conversion and handling of variables were done according to the SweTrau manual [@Manual2021]. A multivariable logistic regression was conducted to find the significant association between resuscitation procedures and opportunities for improvement. The results were presented with a 95% confidence level and a p-value less than 0.05 was considered significant.
 
 ### Ethical considerations
+***Respect for autonomy***
 
-Respect for autonomy
-No consent has been given <!-- ? --> and we are aware of the risk for data breach. We this in mind we protect the patient information i a secure database and fully anonymize patient names and ID numbers. 
+No consent has been given <!-- ? -->and we are aware of the risk of data breach. We this in mind we protect the patient information in a secure database and fully anonymize patient names and ID numbers. 
 
-The Principle of Justice
+***The Principle of Justice***
+
 All patients who meet the inclusion criteria are included, regardless of their background or demographic. There is no discrimination in the selection of patients or use of their data, ensuring fairness and equity in our study.
 
-The Principle of Beneficence
+***The Principle of Beneficence***
+
 By identifying areas for improvement in resuscitation procedures, we can implement changes that will ultimately lead to reduced mortality and morbidity among future trauma patients. Also, this has the potential to alleviate the burden that trauma injuries place on public health systems.
 
-The Principle of Non-malefience
+***The Principle of Non-malefience***
+
 With authorized personnel being the only ones with access to the database and the data being anonymized and securely stored, the risk of data misuse and leakage is kept to a minimum. 
 
-Ethical permit
+***Ethical permit***
+
 Stockholm Research Ethics Review Board approval number 2021-02541 and 2021-03531.
 
 
@@ -141,12 +148,10 @@ Stockholm Research Ethics Review Board approval number 2021-02541 and 2021-03531
 
 
 
-
+<!--
 ```{r, echo=FALSE, out.width = "400px"}
 knitr::include_graphics("project-timeline.png")
 ```
-
+-->
 
 # References
-
-========
