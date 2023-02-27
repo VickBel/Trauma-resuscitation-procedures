@@ -110,7 +110,7 @@ Gender, age, blood pressure, respiratory rate, Glasgow Coma Scale (GCS) and Inju
 
 ### Bias
 
-Bias is avoided by using synthetic data during the development of the analysis model, which is later implemented on patient data.
+Bias is avoided by using synthetic data during the development of the analysis model, which is later implemented on patient data. <!-- Did I understand this right -->
 
 
 ### Study size
@@ -146,12 +146,12 @@ Stockholm Research Ethics Review Board approval number 2021-02541 and 2021-03531
 
 # Results
 <!--I just wanted to show how to get the flowchart, see the create_flowchart.R file for details and if you might want to change anything. Note that the numbers are off because of scrambled data -->
-<!--
+
 ```{r ofi-flowchart, out.width="100%",fig.cap=" Flowchart describing the exclusions made and the process of trauma cases from arrival until OFI decision.", echo=FALSE, fig.align='center'}
 # Flowchart figure
- #knitr::include_graphics("ofi-flowchart.pdf") 
+knitr::include_graphics("ofi-flowchart.pdf") 
 ```
--->
+
 
 
 
