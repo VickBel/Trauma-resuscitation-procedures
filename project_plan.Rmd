@@ -1,20 +1,6 @@
 ---
 title: "Associations between trauma resuscitation procedures and opportunities for improvement in adult patients with severe trauma"
 output:
-<<<<<<< HEAD
-  pdf_document
-#  word_document: default
-<<<<<<< HEAD
-
-bibliography: # citations.bib
-=======
- # pdf_document: default
-bibliography: bibliography.bib
->>>>>>> 2dfa8c7c5b423a3eef2762099b13c4083e34ef67
-csl: bmcemerg.csl
-link-citations: yes
-
-=======
   word_document: default
   pdf_document: default
   html_document:
@@ -25,7 +11,6 @@ csl: vancouver.csl
 fontsize: 11pt
 linestretch: 1,5
 always_allow_html: yes
->>>>>>> 4cab50587be8fe8de717f42b06e26bdff0b34c79
 ---
 
 
