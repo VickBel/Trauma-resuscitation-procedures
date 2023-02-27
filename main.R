@@ -8,6 +8,8 @@ library(ggplot2)
 library(DiagrammeR) 
 library(table1)
 library(rsvg)
+library(descr)
+
 
 data <- rofi::import_data(test = TRUE)
 names <- c("swetrau","fmp","atgarder","problem","kvalgranskning2014.2017")
@@ -34,16 +36,7 @@ combined.dataset <- clean_all_predictors(combined.dataset)
 combined.dataset <- clean_audit_filters(combined.dataset)
 #Do we need to run this a second time?
 
-
-## Create a flow chart (Saves it as a pdf)
-#create_flowchart(combined.dataset, na.data = "")
-
 ## Create a flow chart (Saves it as a pdf)
 create_flowchart(combined.dataset)
 
-##Hämar alla columner 251st
-colnames(combined.dataset)
-#Hamtar det kolumner hag ber om
-tabel.dataset <- combined.dataset[,c("ed_emerg_proc", "pt_age")]
-
-ncol(combined.dataset)
+mean.age<- round(mean(combined.dataset[,"pt_age_yrs"]), digits = 2)
