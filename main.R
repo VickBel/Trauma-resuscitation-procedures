@@ -37,6 +37,9 @@ combined.dataset <- clean_audit_filters(combined.dataset)
 #Do we need to run this a second time?
 
 ## Create a flow chart (Saves it as a pdf)
-create_flowchart(combined.dataset)
+#
+# Sätter # framför create_flowchart(combined.dataset) för att slippa skapa ny pdf varje gång
+#
+#create_flowchart(combined.dataset)
 
 mean.age<- round(mean(combined.dataset[,"pt_age_yrs"]), digits = 2)
