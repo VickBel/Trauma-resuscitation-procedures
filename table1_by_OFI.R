@@ -88,7 +88,7 @@ table_one$Other_Emergency_Procedure <- case_when(
 
 table1.dpc <- table_one
 ### Här väljer du vad dina två kollumner ska heta
- 
+
 levels(table1.dpc$OFI) <- c("OFI", "No OFI")
 ##############
 ### Table 1 ##
@@ -102,5 +102,4 @@ table1 <-
     | OFI,
     data = table1.dpc,
     caption = "Demographic and Clinical Characteristics of patients screened for OFI."
- )
-
+  )
