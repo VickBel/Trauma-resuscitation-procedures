@@ -1,3 +1,5 @@
+## This cleans the data from inaccurate values
+
 #######################
 ### Clean predictors ##
 #######################

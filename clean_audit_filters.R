@@ -1,3 +1,4 @@
+## cleans the "VK" columns, aka our audit filters.
 
 #################################
 # Clean audit-filters to Yes/No #
