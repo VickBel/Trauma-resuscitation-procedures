@@ -19,7 +19,7 @@ format_table <- function(data) {
         data$ed_emerg_proc_other,
         levels = c(1, 2, 3, 4, 5), 
         labels = c("Thoracic drainage",
-                   "External fixation of fracture",
+                   "External fracture fixation",
                    "Major fracture surgery",
                    "Surgical wound revision",
                    "Other intervention")) 
@@ -31,8 +31,8 @@ format_table <- function(data) {
         labels = c("Thoracotomy",
                    "Laparotomy - hemostasis",
                    "Pelvic packing",
-                   "Revascularization (including surgery for pulseless extremity)",
-                   "Radiological intervention (Endovascular = embolization, stent, stent graft)",
+                   "Revascularization",
+                   "Radiological intervention",
                    "Craniotomy",
                    "Intracranial pressure measurement as sole intervention",
                    "Other intervention")) 
@@ -41,6 +41,8 @@ format_table <- function(data) {
     resuscitation.procedures <- as.character(data$ed_emerg_proc)
     index <- resuscitation.procedures == "Other intervention" & !is.na(resuscitation.procedures)
     resuscitation.procedures[index] <- as.character(data$ed_emerg_proc_other[index])
+    resuscitation.procedures <- factor(resuscitation.procedures, levels = c(sort(unique(resuscitation.procedures)), "None"))
+    resuscitation.procedures[is.na(resuscitation.procedures)] <- "None"
     data$resuscitation.procedures <- factor(resuscitation.procedures, levels = unique(resuscitation.procedures))
     
     ##Requires library(labelled)

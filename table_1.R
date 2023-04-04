@@ -8,11 +8,20 @@ study.dataset$ofi <- factor(study.dataset$ofi, levels = c("Yes", "No"), labels =
 ## create raw table 1 file
 table1 <-
     as.data.frame(table1(
-    ~ pt_age_yrs + pt_Gender + ISS + ed_rr_value + ed_gcs_sum + ed_sbp_value + resuscitation.procedures + res_survival
+        ~ pt_age_yrs +
+            pt_Gender +
+            ISS +
+            ed_rr_value +
+            ed_gcs_sum +
+            ed_sbp_value +
+            resuscitation.procedures +
+            res_survival
     | ofi,
     data = study.dataset,
     caption = "Demographic and Clinical Characteristics of patients screened for OFI."
     ))
 
 saveRDS(table1, "table1.Rds")
+write(kable(table1, format = "pandoc"), "table1.Rmd")
+rmarkdown::render("table1.Rmd", output_format = "word_document")
 
