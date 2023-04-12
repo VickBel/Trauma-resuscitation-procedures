@@ -1,4 +1,4 @@
-
+library(dotenv)
 library(tidyverse)
 library(rofi)
 library(bookdown)
@@ -16,7 +16,7 @@ library(kableExtra)
 lapply(c("clean_all_predictors.R", "clean_audit_filters.R", "format_table.R", "create_flowchart.R"), source)
 
 
-data <- rofi::import_data(test = TRUE)
+data <- rofi::import_data()
 names <- c("swetrau","fmp","atgarder","problem","kvalgranskning2014.2017")
 names(data) <- names
 
@@ -46,14 +46,14 @@ combined.dataset <- clean_audit_filters(combined.dataset)
 #create_flowchart(combined.dataset)
 
 # Extract variables by name 
-variables <- combined.dataset %>%
+study.dataset <- combined.dataset %>%
   select(pt_age_yrs, pt_Gender, ed_sbp_value, ed_rr_value, ed_gcs_sum, ISS, ed_emerg_proc, ed_emerg_proc_other, res_survival, ofi)
 
 # Remove patients with missing values
-clean_variables <- variables[complete.cases(variables), ]
+## clean_variables <- variables[complete.cases(variables), ]
 
 ## load functions
-lapply(c("table_1.R"), source)
+source("./table_1.R")
 #, "descriptive_data.R"
 
 #dd <- descriptive_data(variables) ## descriptive_data.R
