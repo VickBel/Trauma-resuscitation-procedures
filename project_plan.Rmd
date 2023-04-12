@@ -1,6 +1,7 @@
 ---
 title: Associations between trauma resuscitation procedures and opportunities for improvement in adult patients with severe trauma
 output:
+  word_document: default
   pdf_document: 
     latex_engine: xelatex
 bibliography: bibliography.bib
@@ -28,54 +29,59 @@ source("main.R") ## This "imports" the main script file of your project and run 
 
 # Introduction
 ## Background 
-### Trauma and trauma care
-Trauma, a condition resulting from physical injury and the body’s associated response, is a major cause of death and permanent disability worldwide, particularly in young people [@Candef; @Evans]. In 2020, it was responsible for an estimated 4.4 million deaths, accounting for approximately 8% of all deaths globally [@who21].
-Trauma can be complex and require multidisciplinary treatment and rehabilitation, resulting in a significant global public health care burden with high global, personal and societal costs [@Evans]. For example, road traffic injuries estimated to cost $1.8 trillion per year [ @Chen2019]. 
+### Trauma  
+Trauma, a condition resulting from physical injury and the body’s associated response [@WrnbergGerdin2020], is a major cause of death and permanent disability worldwide, particularly in young people [@Candef]. In 2020, it was responsible for an estimated 4.4 million deaths, accounting for approximately 8% of all deaths globally [@who21]. Treating and rehabilitating trauma patients often requires a multidisciplinary approach, leading to considerable public health care burdens and substantial personal, societal, and economic costs [@Evans]. For instance, road injuries alone are estimated to cost the world economy $1.8 trillion between 2015 and 2030 [@Chen2019]. 
 
-The leading causes of trauma are motor vehicle accidents, falls, and penetrating trauma due to violence-related injuries. Moreover, the causes of trauma can vary over time and might be influenced by various factors such as age, population behavior, and resources for trauma prevention and treatment [@who21; @who14].
+According to WHO, the primary causes of trauma include road traffic injuries, interpersonal violence, suicide, drowning, and falls. Among these, road injuries are the leading contributor to disability and death among adults, accounting for over 26% of all Disability-Adjusted Life Years (DALYs) attributed to trauma in 2019. DALYs measure the burden of disease as the number of years lost due to ill-health, disability, or death within a population. In comparison, interpersonal violence is more common among young adults and contributes to approximately 14% of DALYs due to trauma. Falls are a significant issue for the elderly population and rank among the top ten causes of DALYs for individuals aged 75 and above [@Vos2020].
 
-Previous studies show that the quality of trauma care plays a significant role in patient outcomes. The higher quality of trauma care, the better results [@Demetriades2005; @Teixeira2007]. Immediate trauma assessment requires a broad series of interventions depending on the type and severity of the trauma as well as the patient’s specific needs [@Martin2021]. Resuscitation procedures, such as airway management and blood transfusion, are crucial in stabilizing the patient and preserving vital organ functions. Immediate, systematic, and effective implementation of these interventions will significantly improve the patient’s chances of survival and recovery [@Martin2021], emphasizing the importance of having a well-functioning trauma system [@Peitzman1999; @Cole2019; @Moran2018]. 
+### Trauma care 
+The quality of trauma care is a critical factor in patient outcomes, with better results associated with higher quality trauma care [@Ghorbani2018; @Teixeira2007].
+Trauma care disparities persist worldwide, particularly affecting low- and middle-income countries (LMICs), which account for 90% of trauma-related deaths and bear the highest burden of DALYs lost [@Sakran2012]. These nations face significant challenges in trauma care delivery due to inadequate funding, insufficient personnel, suboptimal infrastructure, and limited resources [@Sakran2012; @Mansourati2018; @Shanthakumar2021]. 
 
-A trauma system consists of an organized and coordinated network of pre-hospital and in-hospital healthcare facilities and services integrated with the local public health organization and designated to optimal provide care to injured patients [@Lendrum2012]. Key elements of a trauma system include specialized trauma centers, prehospital care, and quality improvement programs to provide appropriate services across the entire spectrum of trauma care [@Martin2021, @Moran2018]. 
+To address the shortage of healthcare professionals, task shifting is often used as a strategy to improve access to care. Task shifting involves delegating tasks from highly trained healthcare providers to less specialized healthcare workers, or even to non-healthcare workers [@Sakran2012]. In addition to task shifting, traditional healers play an important role in many LMICs. These healers offer healthcare services that are often based on local beliefs and traditions and may be more accessible and culturally acceptable to some individuals than Western medicine [@Audet2020].
 
-Trauma centers are specialized units at hospitals that are equipped and staffed with experienced medical professionals to provide multidisciplinary advanced care [@Candef]. The level of care provided by a trauma center varies from the highest (level I) to the lowest (Level IV) level of care. It is believed that implementation of trauma systems might reduce the mortality and morbidity caused by trauma [@Demetriades2005]. Moreover, it may result in a decrease in the costs associated with initial treatment and continued rehabilitation of trauma patients and hence reducing the healthcare burden
+An obstacle in addressing issues in LMICs is the scarcity of data on trauma care and outcomes, making it difficult to influence governments on public health policies and provision of both appropriate amenities and clinical resources [@Shanthakumar2021]. The challenge lies in incomplete and inconsistent data collection, which makes it hard to obtain accurate and reliable information [@Mansourati2018].
+
+In contrast, high-income countries possess well-established trauma systems with specialized centers, trained teams, high quality treatment and transportation protocols. The system is responsible for managing the entire patient pathway, from the point of trauma, pre-hospital care, emergency department resuscitation, specialist emergency surgical intervention, and rehabilitation, until the patient is reintegrated into society.
+A trauma system consists of an organized and coordinated network of pre-hospital and in-hospital healthcare facilities and services integrated with the local public health organization and is designated to provide optimal care to trauma patients [@Lendrum2012]. Key elements of a trauma system include trauma centers, prehospital care, and quality improvement programs to provide appropriate services across the entire spectrum of trauma care [@Martin2021, @Moran2018]. 
+
+Trauma centers are specialized units at hospitals that are equipped and staffed with experienced medical professionals to provide multidisciplinary advanced care. The level of care provided by a trauma center varies from highest (level I) to lowest (Level IV) level of care. Trauma center verification is associated with better patient outcomes [@Demetriades2005; @Moran2018]. A study conducted in Sweden found that trauma centers provide a substantial survival advantage, reducing the risk of mortality by over 70% for individuals with severe trauma (ISS ≥ 50) [@Candefjord2020]. However, opportunities for improvement remain, including reducing disparities in access to care and enhancing patient outcomes. Better data collection and future studies to identify which specific trauma are best treated at trauma centers and non-trauma centers, respectively [@Candefjord2020].
+Additionally, high-income countries also have strong  trauma prevention programs which may include initiatives to promote safe driving, prevent falls, and reduce violence [].
+
+### Trauma care in Sweden
+Sweden has a well-established trauma system that includes six specialized trauma centers supported by a prehospital care network of trained medical professionals and helicopter-based emergency services for fast transport to trauma centers [@Candef]. Stockholm hosts a level one trauma center. Essential to the Swedish trauma system is trauma quality improvement program (TQIP), which involve systematic aggregation and evaluation of trauma care data [@Swetrau], facilitating regular revision of evidence-based protocols and guidelines.
+
+### Trauma Quality Improvement 
+To improve trauma management, quality must be measured through constant data collection and analysis. TQIP serve as a tool for healthcare organizations to improve their trauma care services. They enable structured and continuous evaluations of processes of care and outcomes, and support the implementation and evaluation of specific solutions [@WHO_QI].
+
+To promote a unified implementation of sustainable TQIP globally, the World Health Organization (WHO), together with the International Association for Trauma Surgery and Intensive Care, and the International Society of Surgery - Société Internationale de Chirurgie, published TQI guidelines [@WHO_QI]. However, there are still significant differences in how TQI is measured around the world, mainly due to the use of different TQI indicators and lack of standardized TQI measurement registration. It is suggested to create an international registry with well-defined TQI indicators to obtain comparable data globally [@Coccolini2021].
+
+The WHO TQI guidelines recommend conducting Morbidity and Mortality (M&M) conferences, which are designed to analyze patient cases and identify areas for improvement in the trauma care process. These conferences bring together all specialties involved in prehospital and inhospital patient care to review cases, identify errors, and discuss ways to improve patient management [@WHO_QI].
 
 ### Opportunities for improvement 
+Opportunity for Improvement (OFI) is an indicator used in Mortality and Morbidity (M&M) conferences. When an OFI is identified in a patient case, information about the case and the identified OFI is recorded in a registry for further evaluation and analysis enabeling creation of new guidelines and policies to improve outcomes [@WHO_QI].
+One type of OFI that is used to measure trauma system performance is the amount of preventable deaths. The incidence of preventable trauma deaths varies widely, ranging from less than 20% in high-income countries (HICs) to over 60% in low- and middle-income countries (LMICs) [@Roy2017].
 
-The quality improvement programs aim to ensure the delivery of safe and high-quality healthcare. The World Health Organization recommends conducting Morbidity and Mortality (M&M) conferences as part of these programs. These conference’s aim to identify errors and areas for improvement in healthcare [@who09; @Blackmore2019]. Opportunity for Improvement (OFI) is a term that refers to situations where certain measures are suggested to improve the outcomes of the patients during trauma assessment. Exploring the presence and the recurring patterns of OFI in trauma patients is suggested to develop new guidelines and improve the outcomes of<!--for?--> trauma patients in the future [@Blackmore2019].
+Significant contributors to OFIs in trauma care are error in judgment, delayed or inappropriate treatment, and procedural errors [@Ghorbani2018; @Teixeira2007; @Trentzsch2015]. Immediate trauma assessment requires a broad series of interventions depending on the type and severity of the trauma as well as the patient’s specific needs [@Martin2021]. Immediate trauma assessment is a critical component of trauma care that involves a series of interventions aimed at quickly identifying and addressing the patient's injuries. The type and severity of the trauma, as well as the patient's specific needs, determine the range of interventions required for effective immediate trauma assessment [@Martin2021]. The emergency department has been identified as a key area where opportunities for improvement in trauma care exist [@OReilly2013; @Vioque2014].
 
-OFIs are common during the initial resuscitation of trauma patients. Immediate and correct interventions during resuscitation is essential with significant impact the patient outcomes. The primary care objective during this phase of trauma assessment is immediate detection and treatment of life-threatening injuries including damage control with surgical intervention. The OFIs related to resuscitation are often due to clinical judgment errors and involve airway management, fluid resuscitation, bleeding control, and chest injury management [@Sanddal2011; @Roy2017; @OReilly2013; @Ghorbani2018; @Vioque2014]. 
+D O'Reilly et al found that problems with judgement are more common than those of skill and that the implementation of a systematic TQI system resulted in a reduction of mortality rate. They found 150 OFIs in 84 out of 127 patients. OFIs occurred in the emergency department and were more common in relation to surgical decision-making (42), care resuscitation (38) and in the prehospital (33) [@OReilly2013]
 
+### Risk groups 
+OFIs are more common in certain high-risk patient groups, such as the elderly population, who often have a high burden of comorbidities and limited physiological reserve. As a result, they may have a reduced ability to stabilize during resuscitation  [@Doumouras2012]. Patients with pre-existing medical conditions are also at risk for OFIs. Obese patients are another high-risk group as they may require more manpower and resources, which can complicate care delivery. Moreover, underdosing of medications is a risk in this patient population due to their pharmacokinetic profile [@Nasraway2006].
 
-### OFIs in resuscitation procedures
+### Common types of OFI
+Immediate and correct interventions during resuscitation is essential with significant impact on the patient outcomes. The primary care objective in the early phase of trauma assessment is stabilizing the patient and preserving vital organ functions [@Martin2021]. 
+Several studies have identified the early emergency resuscitation phase as a critical area where most OFIs occur. The intervention that are the most associated with with OFIs are airway management, hemorrhage control, fluid resuscitation, and chest injury management  [@Sanddal2011; @Vioque2014; @Berbiglia2013; @Schoeneberg2016; @Girard2019; @Roy2017]. 
+
+Analyzing OFIs is a well-known procedure for improving trauma care [@Schoeneberg2016]. It is known that the leading cause for OFIs is human errors during the emergency department initial care. To improve trauma care and patient outcomes, it is important to identify areas with the highest potential for improvement. There is limited data about the presence and patterns of OFI in relation to the resuscitation process and patient outcomes.
 
 <!--I din studie så är preventable death en typ av OFI men exakt vad OFI är varierar mellan olika litteratur. I ditt fall är det ju även avvikelser. Kunskapsluckan: Vi vet väldigt mycket om resusciation och ren mortalitet, en del om resusciation och preventable deaths men väldigt lite eller egentligen ingenting resusciation och OFI ur ett bredare perspektiv utanför mortalitet -->
 
-<!-- 
-Historically, trauma care has received less attention and support internationally compared to other medical specialties [@Sakran2012]. Despite this, there is a lot of literature concerning quality improvement in trauma care. 
-For example there is a lot of studies exploring whether the use of resuscitation techniques is effective in preventing deaths <!-- checka källa igen --> <!--[@Ghorbani2018]. There is also literature that examines the association between the use of resuscitation techniques and deaths that could have been avoided <!-- checka källa igen--> <!--[@Vioque2014]. However, there is currently a lack of research on the association between mistakes made during the resuscitation process and morbidity.
-
-
-A study from 2014 found that the incidence of preventable trauma deaths varies widely with mortality rates of 2% to 29% depending on the definitions used [@Vioque2014]. 
-
-In a recent study from Karolinska University Hospital, a Level 1 trauma center, the reported trauma mortality rate was 4% [@Spahn2019]. 
-
-OFIs exist in even the most well-equipped and staffed trauma centers [@Teixeira2007].
-
-Despite some progress in this field [@Ghorbani2018; @Berbiglia2013; @Teixeira2007; @Cole2019; @Spahn2019; @Delay], limited research exists on the correlation between resuscitation procedures and mortality, and the inclusion of morbidity data is scarce.
--->
-
-There is comprehensive knowledge about resuscitation and mortality in trauma patient, including quality improvement in trauma care. However, there is limited data about the presence and patterns of OFI in relation to the resuscitation process and patient outcomes <!-- Tittar vi ffa på morbidity? -->
-<!-- Måste skriva mer bakgrund-->
-
-
 # Aim
-We hypothesize that the resuscitation procedures done in the emergency department, are associated with OFI. 
-This study explores the relationship between resuscitation procedures and possible improvement in outcomes for adult patients with trauma<!--survivors and non-survivors med tanke på morbiditet??--> 
+The aim of this study was to assess how emergency department resuscitation procedures are associated with opportunities for improvement in trauma care.
 
 # Methods
 ### Study design
-
 We conducted a registry-based study using data on trauma patients in two registries at Karolinska University Hospital (KUH): the trauma registry and the trauma care quality database. The trauma registry reports to the Swedish Trauma Registry and includes, demographics, pre-hospital, hospital, and post-hospital care information following the Utstein template [@Dick1999]. 
 The trauma care quality database consists of cases selected for the M&M conference with information on OFI.
 
@@ -85,10 +91,9 @@ The two databases were linked and analyzed to estimate the association between t
 
 The Karolinska University Hospital is situated in Solna, Sweden, and is the primary trauma center for the Stockholm region and several other regions. This means that KUH is the main center for treating trauma for approximately 3 million people. The trauma center at KUH meets the standards of a level 1 trauma center defined by the American College of Surgeons [@NKSlev1]. All high-priority patients in Stockholm are transported to KUH for treatment by a trauma team. 
 
-
 In case of suspected presence of OFI the patient is discussed in the M&M conference by a multidisciplinary team. The presence of OFI during trauma assessment is evaluated by a specialized trauma nurse on digital based audit filters protocols. <!-- Ref -->
 
-Regardless the presence OFI , all patients are recorded in the trauma care quality database.
+Regardless the presence of OFI , all patients are recorded in the trauma care quality database.
 
 ### Participants
 
@@ -128,7 +133,7 @@ Bias is avoided by using synthetic data during the development of the analysis m
 
 ### Study size
 
-We will include all patients in both the KUH trauma care quality registry and the corresponding information from the KUH trauma registry. Registration took place between 2017 and 2021, with a total of approximately <!-- Här behöver/ska du inte nämna antal. Det är första delen av resultatet. VB: Ska jag ta bort Study size kanske? -->patients.
+We will include all patients in both the KUH trauma care quality registry and the corresponding information from the KUH trauma registry. Registration took place between 2017 and 2021<!-- VB: Ska jag ta bort Study size kanske? -->
 
 ### Statistical methods
 
@@ -140,7 +145,6 @@ The data was compiled and analyzed using R, a statistical computing language[@R]
 The information used in this study was collected from SweTrau, a database that stores data on all trauma patients in Sweden. Patients were informed about their participation and were notified via letter that their data could be used for further research. Patients were also given the right to be excluded from the study and could withdraw their participation at any time.
 To prevent the risk of data breach, the patient information is stored in a secure database where patient names and ID numbers are fully anonymized.
 
-
 <!--Oklart exakt vad KI vill ha i dessa fält. Men den juridiska grunden för insamligen är att informationen är av allmänt intresse. Läs detta dokument: https://rcsyd.se/swetrau/wp-content/uploads/sites/10/2019/09/Patientinformation-SweTrau.pdf -->
 ***The Principle of Justice***
 
@@ -148,7 +152,7 @@ The inclusion criteria for the study are based solely on the nature of the patie
 
 ***The Principle of Beneficence***
 
-By identifying areas for improvement in resuscitation procedures, we can implement changes that will ultimately lead to reduced mortality and morbidity among future trauma patients. Also, this has the potential to alleviate the burden that trauma injuries place on public health systems.
+By identifying areas for improvement in resuscitation procedures, we can implement changes that will ultimately lead to reduced mortality and morbidity among future trauma patients. Also, this has the potential to alleviate the burden that trauma place on public health systems.
 
 
 ***The Principle of Non-malefience***
@@ -164,7 +168,7 @@ Stockholm Research Ethics Review Board approval number 2021-02541 and 2021-03531
 
 # Results
 ### Patient caracteristics
-The study included ` total_pts`, out of which ` excluded_pts` were excluded due to incomplete data. Patent characteristics for the remaining patients are summarized in Table 1.
+The study included ` total_pts`, out of which ` excluded_pts` were excluded due to incomplete data. Patent characteristics for the remaining patients are summarized in \@ref(tab:Table one).
 
 The median age of patients was `age_median , min, max)` years. ` total_male_count`(`total_male_ptc`%) of the patients were male. The mean ISS rates was `iss_mean`. The patient had a respiratory rate of `rr_mean` breaths per minute. The mean systolic blood pressure and mean GCS were ` sbp_mean` mmHg and ` gcs_mean`, respectively. 
 
@@ -177,7 +181,7 @@ In the OFI-group, `ofi_yes_male` (`ofi_yes_male_ptc`) were male and `ofi_yes_fem
 
 The GCS mean rates were higher in the `ofi_yes_gcs vs ofi_no_gcs` patient group compared to ofi_yes_gcs vs ofi_no_gcs`
 OFI in systolic blood pressure, respiratory rate, Glasgow Coma Scale score, and Injury Severity Score??
-Moreover, the emergency procedures that had most OFI was ` ......... `. 
+Moreover, the emergency procedures that had most OFI was `total_ofi_1`. 
 
 \newpage
 ```{r Tableone, echo=FALSE, fig.cap="Selected sample characteristics", fig.align='center' }
