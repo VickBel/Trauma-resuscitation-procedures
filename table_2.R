@@ -1,7 +1,7 @@
 # create two models
-model1 <- glm(ofi ~ pt_Gender + res_survival + pt_age_yrs + ed_sbp_value + ed_rr_value + ed_gcs_sum + ISS + resuscitation.procedures, data = study.dataset, family = binomial())
+model1 <- glm(ofi == "OFI" ~ pt_Gender + res_survival + pt_age_yrs + ed_sbp_value + ed_rr_value + ed_gcs_sum + ISS + resuscitation.procedures, data = study.dataset, family = binomial())
 
-model1.table <- as_kable(tbl_regression(model1, exponentiate = TRUE))
+model1.table <- as_kable(tbl_regression(model1, exponentiate = TRUE), format = "pandoc")
 saveRDS(model1.table, "model1-table.Rds")
 write(model1.table, "table2.Rmd")
 rmarkdown::render("table2.Rmd", output_format = "word_document")
