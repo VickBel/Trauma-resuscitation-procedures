@@ -11,6 +11,7 @@ library(rsvg)
 library(descr)
 library(labelled)
 library(kableExtra)
+library(gtsummary)
 
 ## load functions
 lapply(c("clean_all_predictors.R", "clean_audit_filters.R", "format_table.R", "create_flowchart.R"), source)

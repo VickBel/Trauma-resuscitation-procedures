@@ -1,43 +1,32 @@
-                                                           OFI                 No OFI              Overall           
----------------------------------------------------------  ------------------  ------------------  ------------------
-                                                           (N=431)             (N=5879)            (N=6310)          
-Age                                                                                                                  
-  Mean (SD)                                                48.1 (21.2)         44.9 (21.2)         45.2 (21.2)       
-  Median [Min, Max]                                        47.0 [15.0, 97.0]   42.0 [15.0, 100]    43.0 [15.0, 100]  
-Gender                                                                                                               
-  Female                                                   114 (26.5%)         1813 (30.8%)        1927 (30.5%)      
-  Male                                                     317 (73.5%)         4066 (69.2%)        4383 (69.5%)      
-Injury severity score (ISS)                                                                                          
-  Mean (SD)                                                18.9 (11.3)         12.0 (13.5)         12.4 (13.4)       
-  Median [Min, Max]                                        17.0 [0, 75.0]      9.00 [0, 75.0]      9.00 [0, 75.0]    
-  Missing                                                  0 (0%)              8 (0.1%)            8 (0.1%)          
-Respiratory rate                                                                                                     
-  Mean (SD)                                                19.0 (5.29)         18.4 (4.86)         18.4 (4.89)       
-  Median [Min, Max]                                        18.0 [9.00, 40.0]   18.0 [0, 60.0]      18.0 [0, 60.0]    
-  Missing                                                  87 (20.2%)          1163 (19.8%)        1250 (19.8%)      
-GCS                                                                                                                  
-  Mean (SD)                                                13.8 (2.68)         14.1 (2.39)         14.1 (2.41)       
-  Median [Min, Max]                                        15.0 [3.00, 15.0]   15.0 [3.00, 15.0]   15.0 [3.00, 15.0] 
-  Missing                                                  44 (10.2%)          655 (11.1%)         699 (11.1%)       
-Systolic Blood Pressure                                                                                              
-  Mean (SD)                                                134 (31.2)          133 (33.9)          133 (33.7)        
-  Median [Min, Max]                                        135 [0, 237]        135 [0, 285]        135 [0, 285]      
-  Missing                                                  11 (2.6%)           117 (2.0%)          128 (2.0%)        
-Resuscitation procedure                                                                                              
-  None                                                     186 (43.2%)         4340 (73.8%)        4526 (71.7%)      
-  Radiological intervention                                32 (7.4%)           50 (0.9%)           82 (1.3%)         
-  Thoracic drainage                                        36 (8.4%)           301 (5.1%)          337 (5.3%)        
-  External fracture fixation                               20 (4.6%)           123 (2.1%)          143 (2.3%)        
-  Other intervention                                       3 (0.7%)            41 (0.7%)           44 (0.7%)         
-  Thoracotomy                                              8 (1.9%)            88 (1.5%)           96 (1.5%)         
-  Craniotomy                                               39 (9.0%)           196 (3.3%)          235 (3.7%)        
-  Pelvic packing                                           0 (0%)              5 (0.1%)            5 (0.1%)          
-  Surgical wound revision                                  25 (5.8%)           284 (4.8%)          309 (4.9%)        
-  Laparotomy - hemostasis                                  25 (5.8%)           157 (2.7%)          182 (2.9%)        
-  Intracranial pressure measurement as sole intervention   13 (3.0%)           63 (1.1%)           76 (1.2%)         
-  Major fracture surgery                                   33 (7.7%)           202 (3.4%)          235 (3.7%)        
-  Revascularization                                        11 (2.6%)           29 (0.5%)           40 (0.6%)         
-Mortality (within 30 days)                                                                                           
-  Dead                                                     34 (7.9%)           565 (9.6%)          599 (9.5%)        
-  Alive                                                    395 (91.6%)         5304 (90.2%)        5699 (90.3%)      
-  Missing                                                  2 (0.5%)            10 (0.2%)           12 (0.2%)         
+**Characteristic**                                       **Overall**, N = 6,310   **OFI**, N = 431       **No OFI**, N = 5,879   **p-value** 
+-------------------------------------------------------  -----------------------  ---------------------  ----------------------  ------------
+__Age__                                                  43 (27, 61)              47 (29, 67)            42 (27, 60)             0.002       
+__Gender__                                                                                                                       0.056       
+Female                                                   1,927 (31%)              114 (26%)              1,813 (31%)                         
+Male                                                     4,383 (69%)              317 (74%)              4,066 (69%)                         
+__Injury severity score (ISS)__                          9 (2, 17)                17 (10, 25)            9 (1, 17)               <0.001      
+Unknown                                                  8                        0                      8                                   
+__Respiratory rate__                                     18.0 (16.0, 20.0)        18.0 (16.0, 20.0)      18.0 (16.0, 20.0)       0.12        
+Unknown                                                  1,250                    87                     1,163                               
+__GCS__                                                  15.00 (14.00, 15.00)     15.00 (14.00, 15.00)   15.00 (14.00, 15.00)    <0.001      
+Unknown                                                  699                      44                     655                                 
+__Systolic Blood Pressure__                              135 (120, 150)           135 (120, 150)         135 (120, 150)          0.8         
+Unknown                                                  128                      11                     117                                 
+__Resuscitation procedure__                                                                                                      <0.001      
+None                                                     4,526 (72%)              186 (43%)              4,340 (74%)                         
+Radiological intervention                                82 (1.3%)                32 (7.4%)              50 (0.9%)                           
+Thoracic drainage                                        337 (5.3%)               36 (8.4%)              301 (5.1%)                          
+External fracture fixation                               143 (2.3%)               20 (4.6%)              123 (2.1%)                          
+Other intervention                                       44 (0.7%)                3 (0.7%)               41 (0.7%)                           
+Thoracotomy                                              96 (1.5%)                8 (1.9%)               88 (1.5%)                           
+Craniotomy                                               235 (3.7%)               39 (9.0%)              196 (3.3%)                          
+Pelvic packing                                           5 (<0.1%)                0 (0%)                 5 (<0.1%)                           
+Surgical wound revision                                  309 (4.9%)               25 (5.8%)              284 (4.8%)                          
+Laparotomy - hemostasis                                  182 (2.9%)               25 (5.8%)              157 (2.7%)                          
+Intracranial pressure measurement as sole intervention   76 (1.2%)                13 (3.0%)              63 (1.1%)                           
+Major fracture surgery                                   235 (3.7%)               33 (7.7%)              202 (3.4%)                          
+Revascularization                                        40 (0.6%)                11 (2.6%)              29 (0.5%)                           
+__Mortality (within 30 days)__                                                                                                   0.2         
+Dead                                                     599 (9.5%)               34 (7.9%)              565 (9.6%)                          
+Alive                                                    5,699 (90%)              395 (92%)              5,304 (90%)                         
+Unknown                                                  12                       2                      10                                  

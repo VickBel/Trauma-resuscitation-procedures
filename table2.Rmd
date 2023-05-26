@@ -1,27 +1,27 @@
-**Characteristic**                                        **OR**     **95% CI**    **p-value** 
--------------------------------------------------------  ---------  ------------  -------------
-__Gender__                                                                                     
-Female                                                       —           —                     
-Male                                                       0.92      0.71, 1.20        0.6     
-__Mortality (within 30 days)__                                                                 
-Dead                                                         —           —                     
-Alive                                                      0.31      0.14, 0.61       0.001    
-__Age__                                                    0.99      0.99, 1.00       0.027    
-__Systolic Blood Pressure__                                1.00      0.99, 1.00        0.2     
-__Respiratory rate__                                       1.00      0.98, 1.03        0.8     
-__GCS__                                                    0.94      0.88, 1.00       0.059    
-__Injury severity score (ISS)__                            0.94      0.93, 0.95      <0.001    
-__Resuscitation procedure__                                                                    
-None                                                         —           —                     
-Radiological intervention                                  0.16      0.09, 0.28      <0.001    
-Thoracic drainage                                          0.69      0.42, 1.15       0.14     
-External fracture fixation                                 0.36      0.22, 0.65      <0.001    
-Other intervention                                         1.10      0.32, 6.94       >0.9     
-Thoracotomy                                                1.91      0.32, 37.6        0.6     
-Craniotomy                                                 0.26      0.15, 0.48      <0.001    
-Pelvic packing                                            228,781     0.00, NA        >0.9     
-Surgical wound revision                                    0.64      0.38, 1.13       0.10     
-Laparotomy - hemostasis                                    0.50      0.29, 0.91       0.018    
-Intracranial pressure measurement as sole intervention     0.19      0.07, 0.52      <0.001    
-Major fracture surgery                                     0.44      0.29, 0.71      <0.001    
-Revascularization                                          0.13      0.06, 0.32      <0.001    
+**Characteristic**                                        **OR**    **95% CI**    **p-value** 
+-------------------------------------------------------  --------  ------------  -------------
+Gender                                                                                        
+Female                                                      —           —                     
+Male                                                       1.08     0.83, 1.42        0.6     
+Mortality (within 30 days)                                                                    
+Dead                                                        —           —                     
+Alive                                                      3.25     1.64, 7.02       0.001    
+Age                                                        1.01     1.00, 1.01       0.027    
+Systolic Blood Pressure                                    1.00     1.00, 1.01        0.2     
+Respiratory rate                                           1.00     0.97, 1.02        0.8     
+GCS                                                        1.06     1.00, 1.14       0.059    
+Injury severity score (ISS)                                1.07     1.05, 1.08      <0.001    
+Resuscitation procedure                                                                       
+None                                                        —           —                     
+Radiological intervention                                  6.33     3.62, 10.9      <0.001    
+Thoracic drainage                                          1.46     0.87, 2.35       0.14     
+External fracture fixation                                 2.74     1.53, 4.64      <0.001    
+Other intervention                                         0.91     0.14, 3.16       >0.9     
+Thoracotomy                                                0.52     0.03, 3.08        0.6     
+Craniotomy                                                 3.82     2.09, 6.82      <0.001    
+Pelvic packing                                             0.00                      >0.9     
+Surgical wound revision                                    1.57     0.89, 2.60       0.10     
+Laparotomy - hemostasis                                    2.00     1.10, 3.48       0.018    
+Intracranial pressure measurement as sole intervention     5.29     1.91, 13.7      <0.001    
+Major fracture surgery                                     2.26     1.42, 3.48      <0.001    
+Revascularization                                          7.44     3.14, 16.3      <0.001    
